@@ -1,3 +1,3 @@
 Introduction to Git on a website
 
-Google Code-in task
+Project at FOSSASIA Google Code-In 2015
