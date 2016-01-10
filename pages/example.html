@@ -67,6 +67,7 @@
                 <li><a href="file:createrepo.html"> Creating repositories</a></li>
                 <li><a href="file:addfiles.html"> Adding files</a></li>
                 <li><a href="file:commiting.html"> Saving changes</a></li>
+                <li><a href="file:branches.html"> Working with branches</a></li>
               </ol>
             </li>
 
@@ -85,6 +86,41 @@
           <div>
 
             <!-- Your code here -->
+            <h1>Working with Branches</h1>
+
+              <p> Lets say you want to add some new files and code to your project to test if it works better. But you dont want to
+                mess up your current work. So what do you do? You can make a new 'branch' of your project with git and test your code in
+                that branch. If it works well you can also merge it with your main branch, i.e. , master or if it did not you can delete
+                it.</p>
+
+              <p>Use this command to make a new branch:<br>
+                <code>git branch <i>branchname</i></code><br>
+                 For example, if you want to make a new branch named "test",<br>
+                <code>git branch test</code></p>
+
+              <p>To switch and work with a branch, use this command:<br>
+                <code>git checkout <i>branchname</i></code><br>
+                For example, to switch to the previously made branch - "test",<br>
+                <code>git checkout test</code></p>
+
+              <p>Now you can add files, change code, or do anything. All these changes will only be recorded on your new branch.
+                Also make sure, you use the add and commit commands to save changes to your branch.</p>
+
+            <h1>Merging and Deleting branches</h1>
+
+              <p>So after working on your branch, you can merge it with your main branch - master. To merge, you have to first
+                checkout your master branch:<br>
+                <code>git checkout master</code><br>
+                and then merge by using:<br>
+                <code>git merge <i>branchname</i><br>
+                This will merge your branch with your main branch - master. Now you can delete the merged branch by using:<br>
+                <code>git branch -d <i>branchname</i></code><br>
+                and your branch is deleted.</p>
+
+              <p>But if you try out the delete command without merging, it might show an error. To forcefully delete a branch
+                try this command:<br>
+                <code>git branch -D <i>branchname</i></code></p>
+
 
               <p><div id="aligl"><a href=#>Previous page</a></div>
               <div id="aligr"><a href=#>Next page</a></div></p>
