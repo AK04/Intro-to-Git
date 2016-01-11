@@ -12,17 +12,17 @@
     <title>Introduction to Git</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -59,27 +59,27 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="file:..\index.html">Introduction <span class="sr-only">(current)</span></a></li>
+            <li><a href="file:..\..\index.html">Introduction <span class="sr-only">(current)</span></a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="">Getting Started</a>
+            <li><a href="file:..\getting-started\createrepo.html">Getting Started</a>
               <ol>
-                <li><a href="file:getting-started\createrepo.html"> Creating repositories</a></li>
-                <li><a href="file:getting-started\addfiles.html"> Adding files</a></li>
-                <li><a href="file:getting-started\commiting.html"> Saving changes</a></li>
-                <li><a href="file:getting-started\branches.html"> Working with branches</a></li>
+                <li><a href="file:..\getting-started\createrepo.html"> Creating repositories</a></li>
+                <li><a href="file:..\getting-started\addfiles.html"> Adding files</a></li>
+                <li><a href="file:..\getting-started\commiting.html"> Saving changes</a></li>
+                <li><a href="file:..\getting-started\branches.html"> Working with branches</a></li>
               </ol>
             </li>
 
-            <li><a href="file:collaborating\makeconnections.html">Collaborating</a></li>
+            <li class="active"><a href="">Collaborating</a></li>
             <ol>
-              <li><a href="file:collaborating\makeconnections.html"> Connecting with repositories</a></li>
-              <li><a href="file:collaborating\pullpush.html"> Pulling and Pushing</a></li>
+              <li><a href="file:makeconnections.html"> Connecting with repositories</a></li>
+              <li><a href="file:pullpush.html"> Pulling and Pushing</a></li>
             </ol>
 
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="file:commandlist.html">Basic command list</a></li>
+            <li><a href="file:..\commandlist.html">Basic command list</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -87,23 +87,34 @@
 
           <div>
 
-            <h1>Saving Changes - Commiting</h1>
+            <!-- Your code here -->
 
-              <p>Now that we have added files and staged it, its time for us to commit(save) the changes.<br>
-                Try the git status command. You can see that they are requesting you to commit the changes.<br></p>
-              <p>Usage:<br>
-                <code>git commit -m "<i>Your message</i>"</code><br>
-                This command is used for small messages for small changes. For example,<br>
-                <code>git commit -m "Added Text.txt file"</code><br> </p>
+            <h1>Connecting with repositories</h1>
 
-              <p>For bigger messages for bigger changes, use this command:<br>
-                <code>git commit -a</code><br>
-                This will open up a text editor(there might be a delay sometimes) where you have to add the message.
-                 After typing your message, save the file and close it. You are done commiting.</p>
+              <h2>Adding urls</h2>
+
+                <p>You can sync with repositories uploaded online, by adding connections urls using git remote. The urls will be seen on the
+                  repositories webpage. With these urls, you can download and upload your updated versions(we will get to that shortly)
+                  of the repository. To add the url, use this command:<br>
+                    <code>git remote add <i>name url</i></code><br>
+                  You can then refer to this url by the name you gave when you need to download or upload the files. For example, you can add my
+                  repository's url like this:<br>
+                    <code>git remote albin https://github.com/AK04/Guess-game.git</code><br>
+
+              <h2>Checking, Renaming and Deleting urls</h2>
+
+                <p>You can see all the urls you have added using this command:<br>
+                    <code>git remote -v</code><br></p>
+
+                <p>You can rename your url using this command:<br>
+                    <code>git remote rename <i>oldname newname</i></code></p>
+
+                <p>To delete your url:<br>
+                    <code>git remote rm <i>name</i></code>
 
 
-            <p><div id="aligl"><a href=#>Previous page</a></div>
-            <div id="aligr"><a href=#>Next page</a></div></p>
+            <p><div id="aligl"><a href="file:..\getting-started\branches.html">Previous page</a></div>
+            <div id="aligr"><a href="file:pullpush.html">Next page</a></div></p>
 
           </div>
 
@@ -116,10 +127,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../assets/js/vendor/holder.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
