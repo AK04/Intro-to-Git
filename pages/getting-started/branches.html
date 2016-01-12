@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Introduction to Git</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #aligr {
+        text-align: right;
+      }
+      #aligl {
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Introduction to Git</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="file:..\..\index.html">Introduction <span class="sr-only">(current)</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="">Getting Started</a>
+              <ol>
+                <li><a href="file:createrepo.html"> Creating repositories</a></li>
+                <li><a href="file:addfiles.html"> Adding files</a></li>
+                <li><a href="file:commiting.html"> Saving changes</a></li>
+                <li><a href="file:branches.html"> Working with branches</a></li>
+              </ol>
+            </li>
+
+            <li><a href="file:..\collaborating\makeconnections.html">Collaborating</a>
+            <ol>
+              <li><a href="file:..\collaborating\makeconnections.html"> Connecting with repositories</a></li>
+              <li><a href="file:..\collaborating\pullpush.html"> Pulling and Pushing</a></li>
+            </ol>
+            </li>
+          </ul>
+
+          <ul class="nav nav-sidebar">
+            <li><a href="file:..\commandlist.html">Basic command list</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+
+          <div>
+
+            <!-- Your code here -->
+            <h1>Working with Branches</h1>
+
+              <p> Lets say you want to add some new files and code to your project to test if it works better. But you dont want to
+                mess up your current work. So what do you do? You can make a new 'branch' of your project with git and test your code in
+                that branch. If it works well you can also merge it with your main branch, i.e. , master or if it did not you can delete
+                it.</p>
+
+              <p>Use this command to make a new branch:<br>
+                <code>git branch <i>branchname</i></code><br>
+                 For example, if you want to make a new branch named "test",<br>
+                <code>git branch test</code></p>
+
+              <p>To switch and work with a branch, use this command:<br>
+                <code>git checkout <i>branchname</i></code><br>
+                For example, to switch to the previously made branch - "test",<br>
+                <code>git checkout test</code></p>
+
+              <p>Now you can add files, change code, or do anything. All these changes will only be recorded on your new branch.
+                Also make sure, you use the add and commit commands to save changes to your branch.</p>
+
+            <h1>Merging and Deleting branches</h1>
+
+              <p>So after working on your branch, you can merge it with your main branch - master. To merge, you have to first
+                checkout your master branch:<br>
+                <code>git checkout master</code><br>
+                and then merge by using:<br>
+                <code>git merge <i>branchname</i></code><br>
+                This will merge your branch with your main branch - master. Now you can delete the merged branch by using:<br>
+                <code>git branch -d <i>branchname</i></code><br>
+                and your branch is deleted.</p>
+
+              <p>But if you try out the delete command without merging, it might show an error. To forcefully delete a branch
+                try this command:<br>
+                <code>git branch -D <i>branchname</i></code></p>
+
+
+              <p><div id="aligl"><a href="file:commiting.html">Previous page</a></div>
+              <div id="aligr"><a href="file:makeconnections.html">Next page</a></div></p>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
