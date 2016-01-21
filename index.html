@@ -29,6 +29,24 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+
+    function rightArrowPressed() {
+       // Your stuff here
+       window.open("pages/getting-started/createrepo.html","_self");
+    }
+
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        switch (evt.keyCode) {
+            case 39:
+                rightArrowPressed();
+                break;
+        }
+    };
+
+    </script>
+
     <style>
       #aligr {
         text-align: right;
@@ -96,7 +114,7 @@
           </div>
 
           <div>
-            <p>This website was build in association with <a href="https://codein.withgoogle.com/">Google Code-in</a> and
+            <p>This website was build by <a href="https://twitter.com/albindoesgam3s">me</a>, in association with <a href="https://codein.withgoogle.com/">Google Code-in</a> and
               with the help of <a href="http://fossasia.org/">FOSSASIA</a>.</p>
           </div>
 
